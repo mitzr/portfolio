@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Rachel Schmitz | New Media Designer</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<!--<link rel="stylesheet" href="stylesheets/skeleton.css"> -->
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	
+	<!--<link rel="stylesheet" href="css/sticky-navigation.css" type="text/css" /> -->
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- jQuery / Javascript
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
+	
+
+  	
+  		<!-- LAZY LOAD
+  		================================================== -->
+			  	<script>			  	
+			  	 $("img").lazyload({         
+				     effect : "fadeIn",
+				     container: $(".container")
+				 });
+				</script>
+	
+		<!-- STICKY NAV
+  		================================================== -->
+	<script>
+		$(function() {
+		
+			// grab the initial top offset of the navigation 
+			var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
+			
+			// our function that decides weather the navigation bar should have "fixed" css position or not.
+			var sticky_navigation = function(){
+				var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+				
+				// if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
+				if (scroll_top > sticky_navigation_offset_top) { 
+					$('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
+				} else {
+					$('#sticky_navigation').css({ 'position': 'relative' }); 
+				}   
+			};
+			
+			// run our function on load
+			sticky_navigation();
+			
+			// and run it again every time you scroll
+			$(window).scroll(function() {
+				 sticky_navigation();
+			});
+			
+		});
+	</script>	 
+	
+	<!-- Fonts
+	================================================== -->
+	<script type="text/javascript" src="//use.typekit.net/oxo8wsu.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel='shortcut icon' href='http://rschmitzdesign.com/4/img/favicon.ico' />
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+
+	
+	
+
+		
+	<div id="demo_top_wrapper"><!-- BEGIN #demo_top_wrapper -->
+	
+		<div id="sticky_navigation_wrapper">
+			<div id="sticky_navigation">
+				<div class="demo_container">
+					<a href="./"><div class="logo"></div></a>
+					<ul>
+						<li><a class="work" href="./" class="selected">WORK</a></li>
+						<li><a class="about" href="#">ABOUT</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	
+	</div><!-- END #demo_top_wrapper -->	
+	
+<div class="beige-bg"><!--backgroound outside of container -->	
+	<div class="container">		
+		<div class="row">		
+			<div id="yc" class="hover-campaign">
+				<img src="img/ap_cover.jpg" />
+			</div>
+		</div>
+		
+		<div class="about">
+			<p>I rebranded the network Animal Planet where I created a print campaign as well as a mobile application. I used the words Adventure, Playful, and Curiosity, as my inspiration along with demographic research to guide my redesign of the logo and stationery, create a set of posters, design strategically placed decals, animate three 5-second logo bumpers, and allow users to further interact with the network by designing a mobile application.</p>
+		</div>
+		
+		<div class="campaign">		
+			<img src="img/ap-blue-poster-imp.jpg" />
+		</div>
+		<div class="campaign">		
+			<img src="img/ap-green-poster-imp.jpg" />
+		</div>
+		<div class="campaign">		
+			<img src="img/ap-orange-poster-imp.jpg" />
+		</div>
+		<div class="campaign">		
+			<img src="img/green_ambient_imp.jpg" />
+		</div>
+		
+		
+		
+		
+
+		
+		
+		
+		<!--bottom 3 row<div class="row">		
+			<div class="one-third column">
+				<a href="http://rschmitzdesign.com/4/yc">
+					<div id="yc">
+			
+					</div>
+				</a>
+			</div>
+			<div class="one-third column">
+				<a href="http://rschmitzdesign.com/4/ap">
+					<div id="ap">
+						
+					</div>
+				</a>
+			</div>
+			<div class="one-third column">
+				<a href="https://vimeo.com/64119372">
+					<div id="ap"></div>
+				</a>
+			</div>
+		</div>-->
+	</div><!-- container -->
+		
+	<footer>
+		<div class="footer-main">
+		</div>
+		<div class="copyright">All work copyright &copy; Rachel Schmitz 2013</div>
+	</footer>
+</div><!--END backgroound outside of container -->	
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

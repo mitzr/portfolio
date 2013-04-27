@@ -1,0 +1,103 @@
+#demo_top_wrapper {
+	margin:0 0 0 0;
+	width:100%;
+	position: relative;
+	z-index:110;
+	
+	}
+	
+#demo_top { 
+	margin:0;
+	height:310px; 
+	padding:0 0 0 0;
+	width:100%;
+}
+
+
+#sticky_navigation_wrapper {
+	width:100%;
+	height:85px;
+	z-index: 9999 !important;
+	
+	}
+	
+#sticky_navigation {
+	position: relative;
+	background-color: #000;
+	margin: 0 auto;
+	width: 100%;
+	height: 85px;
+	-webkit-box-shadow: 0 1px 5px -1px #333;
+	-moz-box-shadow: 0 1px 5px -1px #333;
+	box-shadow: 0 1px 5px -1px #333;
+	clear: both;
+	z-index: 9999 !important;
+	right:0;
+	left:0;
+	padding:0;
+	border-top: 5px solid #222;
+	
+}	
+	
+#sticky_navigation ul { 
+	width: auto;
+	height: auto;
+	list-style-type: none;
+	float: right;
+	margin-top: 20px;
+	padding-top:15px;
+	line-height: inherit;
+	}
+	
+#sticky_navigation ul li { 
+	margin:10px 0 0 0; 
+	padding:0; 
+	display:inline; 
+	}
+	
+#sticky_navigation ul li a { 
+	font-family: 'bignoodletitlingregular', sans-serif;
+	letter-spacing: 4px;
+	font-size: 25px;
+	text-decoration: none;
+	color: #EEEBE1;
+	-moz-transition: all 0.65s;
+	-ms-transition: all 0.65s;
+	-o-transition: all 0.65s;
+	-webkit-transition: all 0.65s;
+	transition: all 0.65s;
+	padding-top: 10px;
+	margin-left: 15px;
+	border-top: 2px solid #EEEBE1;
+	}
+	
+#sticky_navigation ul li a:hover {
+	border-top: 2px solid #69B8C9;
+	padding-top: 10px;
+}
+
+#sticky_navigation ul li.current a {
+	border-top: 2px solid #69B8C9;
+	padding-top: 10px;	 
+}
+
+/* MAGENTA HEX IS #E81582 */
+ 
+ 
+#cover_300 {
+	height: 300px;
+	width: 100%;
+	margin:0 auto;
+	position:relative;
+	z-index: 1;
+	background-color:#000;
+	float:left;
+	display:block;
+	border-top:5px solid #69B8C9;
+	}
+
+#invis_430 #hero {
+	background-image: url(img/hero-photo2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
