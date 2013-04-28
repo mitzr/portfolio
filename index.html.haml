@@ -1,0 +1,68 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title Rachel Schmitz | New Media Designer
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=2", :name => "viewport"}
+    %link{:href => "_assets/favicon.ico", :rel => "shortcut icon"}
+    %link{:href => "_assets/stylesheets/fonts.css", :rel => "stylesheet"}
+    %link{:href => "_assets/stylesheets/application.css", :rel => "stylesheet"}
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js", :type => "text/javascript"}
+
+  %body
+    #page-head
+      .container
+        #head-intro
+          %h1.intro-copy
+            Hello, 
+            %span.blue-text I'm Rachel Schmitz 
+            &amp; 
+            %br
+            I'm a 
+            %span.pink-text New Media Designer 
+            %br
+            in 
+            %span.blue-text San Francisco, CA
+    #main
+      #global-navigation
+        .container
+          %a#logo{:href => "http://www.rachel-schmitz.com"}
+            %span.hidden Rachel Schmitz
+          %ul
+            %li
+              %a#work-link.selected Work
+            %li
+              %a#about-link About
+      #content.container
+        .project
+          %img{:src => "_assets/img/ap_cover.jpg"}
+        .project
+          %img{:src => "_assets/img/50logos.jpg"}
+        .project
+          %img{:src => "_assets/img/ap_cover.jpg"}
+        .project
+          %img{:src => "_assets/img/50logos.jpg"}
+      #page-foot
+        %p All work copyright &copy; Rachel Schmitz 2013.
+  :javascript
+    $(document).ready(function(){
+      $("#about-link").click(function(){
+        $("html body").animate({scrollTop: $("#page-foot").offset().top}, 500);
+        $("#about-link").addClass("selected");
+        $("#work-link").removeClass("selected");
+      });
+      $("#work-link").click(function(){
+        $("html body").animate({scrollTop: 0}, 500);
+        $("#about-link").removeClass("selected");
+        $("#work-link").addClass("selected");
+      });
+      $(window).scroll(function(){
+        var window_position = $(window).scrollTop();
+        if(window_position >= 300){
+          $("#global-navigation").css("position", "fixed");
+          $("#global-navigation").css("top", "0");
+        } else {
+          $("#global-navigation").css("position", "relative");
+        };
+      });
+    });
