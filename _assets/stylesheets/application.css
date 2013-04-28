@@ -1,21 +1,137 @@
-/*
-Errno::ENOENT: No such file or directory - _assets/stylesheets/application.sass
+* {
+  margin: 0;
+  padding: 0; }
 
-Backtrace:
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:339:in `read'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:339:in `update_stylesheet'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `each'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:299:in `block in watch'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
-/Users/design/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - _assets/stylesheets/application.sass"; }
+html {
+  width: 100%;
+  height: 100%; }
+
+a {
+  display: block;
+  text-decoration: none; }
+
+li {
+  list-style-type: none;
+  list-style: none; }
+
+head, script {
+  display: none; }
+
+body {
+  background: #eeebe1;
+  font-family: "proxima-nova", serif;
+  font-size: 13px; }
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  overflow: auto; }
+  @media only screen and (max-width: 960px) {
+    .container {
+      width: 100%; } }
+
+#page-head {
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+  height: 300px;
+  top: 0;
+  border-top: 5px #69bbc9 solid;
+  background: url("../img/hero-photo2.jpg") center center;
+  background-size: cover; }
+
+#head-intro {
+  float: left;
+  background: black;
+  color: white;
+  width: auto;
+  padding: 20px;
+  margin: 50px 30px 0 30px;
+  font-weight: 300 !important;
+  font-family: "adelle", serif;
+  font-size: 13px; }
+
+#global-navigation {
+  background: black;
+  width: 100%;
+  height: 65px;
+  color: white;
+  border-bottom: 5px #333333 solid; }
+  #global-navigation a {
+    color: white; }
+  #global-navigation ul {
+    width: auto;
+    float: right; }
+    #global-navigation ul li {
+      float: left; }
+    #global-navigation ul a {
+      display: block;
+      font-size: 16px;
+      text-transform: uppercase;
+      height: 45px;
+      vertical-align: middle;
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 20px;
+      margin-left: 5px;
+      margin-right: 5px;
+      line-height: 45px;
+      border-top: 2px black solid; }
+      #global-navigation ul a:hover {
+        border-top: 2px #b04570 solid; }
+      #global-navigation ul a.selected {
+        border-top: 2px #69bbc9 solid; }
+  #global-navigation #logo {
+    margin: 10px 0 0 0;
+    display: block;
+    float: left;
+    background: url("../img/logo_bcard_NOBG_w.png") top left no-repeat;
+    width: 51px;
+    height: 80px; }
+
+#main {
+  position: absolute;
+  z-index: 100;
+  background: #eeebe1;
+  margin: 300px 0 0 0;
+  margin-bottom: 300px;
+  width: 100%; }
+
+#content {
+  margin: 80px auto 20px auto; }
+  #content .project {
+    float: left;
+    width: 100%;
+    margin-top: -4px; }
+    #content .project img {
+      width: 100%; }
+
+#page-foot {
+  display: absolute;
+  bottom: 0;
+  height: 300px;
+  background: #333333;
+  border-top: 5px #b04570 solid; }
+  #page-foot section {
+    position: relative;
+    height: 300px; }
+  #page-foot p {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: black;
+    height: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+    position: absolute;
+    bottom: 0; }
+
+.hidden {
+  visibility: hidden; }
+
+.blue-text {
+  color: #69bbc9; }
+
+.pink-text {
+  color: #b04570; }

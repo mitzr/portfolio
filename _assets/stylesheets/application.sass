@@ -1,0 +1,169 @@
+// VARIABLES
+$blue: #69BBC9
+$pink: #B04570
+$gray: #333
+$tan: #EEEBE1
+
+$bottom-level: 0
+$level-1: 100
+$top-level: 9999
+
+// MIXINS
+@mixin standard-type($size)
+	font-family: "proxima-nova", serif
+	font-size: $size
+
+@mixin hero-type($size)
+	font-family: "adelle", serif
+	font-size: $size
+
+// END MIXINS
+// BASIC RESET
+
+*
+	margin: 0
+	padding: 0
+
+html
+	width: 100%
+	height: 100%
+
+a
+	display: block
+	text-decoration: none
+
+li
+	list-style-type: none
+	list-style: none
+
+head, script
+	display: none
+
+body
+	background: $tan
+	@include standard-type(13px)
+
+// END OF BASIC RESET
+// BASIC STRUCTURAL ELEMENTS
+
+.container
+	width: 960px
+	margin: 0 auto
+	overflow: auto
+	@media only screen and (max-width: 960px) // Responsive Behavior
+		width: 100%
+
+// END OF STRUCTURAL ELEMENTS
+// PAGE HEADER
+
+#page-head // Page header
+	position: fixed
+	width: 100%
+	z-index: $bottom-level
+	height: 300px
+	top: 0
+	border-top: 5px $blue solid
+	background: url('../img/hero-photo2.jpg') center center
+	background-size: cover
+
+#head-intro // Introduction block
+	float: left
+	background: black
+	color: white
+	width: auto
+	padding: 20px
+	margin: 50px 30px 0 30px
+	font-weight: 300 !important
+	@include hero-type(13px)
+
+#global-navigation
+	background: black
+	width: 100%
+	height: 65px
+	color: white
+	border-bottom: 5px $gray solid
+	a
+		color: white
+	ul
+		width: auto
+		float: right
+		li
+			float: left
+		a
+			display: block
+			font-size: 16px
+			text-transform: uppercase
+			height: 45px
+			vertical-align: middle
+			text-align: center
+			padding-left: 10px
+			padding-right: 10px
+			margin-top: 20px
+			margin-left: 5px
+			margin-right: 5px
+			line-height: 45px
+			border-top: 2px black solid
+			&:hover
+				border-top: 2px $pink solid
+			&.selected
+				border-top: 2px $blue solid
+	#logo
+		margin: 10px 0 0 0
+		display: block
+		float: left
+		background: url("../img/logo_bcard_NOBG_w.png") top left no-repeat
+		width: 51px
+		height: 80px
+
+// END OF PAGE HEADER
+// MAIN CONTENT AREA
+
+#main
+	position: absolute
+	z-index: $level-1
+	background: $tan
+	margin: 300px 0 0 0
+	margin-bottom: 300px
+	width: 100%
+
+#content
+	margin: 80px auto 20px auto
+	.project
+		float: left
+		width: 100%
+		margin-top: -4px
+		img
+			width: 100%
+
+#page-foot
+	display: absolute
+	bottom: 0
+	height: 300px
+	background: $gray
+	border-top: 5px $pink solid
+	section
+		position: relative
+		height: 300px
+	p
+		width: 100%
+		text-align: center
+		color: white
+		background: black
+		height: 40px
+		vertical-align: middle
+		line-height: 40px
+		position: absolute
+		bottom: 0
+// END OF MAIN CONTENT AREA
+// STYLE CLASSES
+
+.hidden
+	visibility: hidden
+
+.blue-text
+	color: $blue
+
+.pink-text
+	color: $pink
+
+// END OF STYLE CLASSES
